@@ -1,0 +1,29 @@
+<assembly>
+   <id>bin</id>
+   <formats>
+      <!-- Formatos en el que queremos el zip -->
+      <!-- <format>tar.gz</format>
+      <format>tar.bz2</format> -->
+      <format>zip</format>
+   </formats>
+   <!-- Ahora que cosas queremos -->
+   <fileSets>
+     <fileSet>
+         <!-- Queremos los jar generados en target que se incluyan en el directorio Jar dentro del zip -->
+         <directory>target</directory>
+         <outputDirectory>/</outputDirectory>
+         <includes>
+            <include>*.jar</include>
+         </includes>
+     </fileSet>
+   </fileSets>
+   <!-- Queremos incluir los jar de los que dependemos -->
+   <dependencySets>
+      <dependencySet>
+         <!-- Queremos los jar dentro de un directorio Jar dentro del zip -->
+         <outputDirectory>/lib</outputDirectory>
+         <!-- Que añada todo lo necesario para la ejecución -->
+         <scope>runtime</scope>
+      </dependencySet>
+   </dependencySets>
+</assembly>

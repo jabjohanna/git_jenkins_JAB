@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ArtifactJAB" default="copyArtefacto">
+	
+	<property name="target" value="target"/>
+	<target name="copyArtefacto">
+		<copy todir="E:/ANT_COPY_ArtifactJAB">
+			 <fileset dir="${target}">
+			      <include name="**/*.zip"/>
+			    </fileset>
+		</copy>
+	</target>
+	
+</project>
