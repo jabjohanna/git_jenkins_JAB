@@ -3,7 +3,7 @@
 	
 	<property name="target" value="target"/>
 	<target name="copyArtefacto">
-		<copy todir="E:/ANT_COPY_ArtifactJAB">
+		<copy todir="${rutaCopiar}">
 			 <fileset dir="${target}">
 			      <include name="**/*.zip"/>
 			    </fileset>
